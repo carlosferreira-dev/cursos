@@ -9,16 +9,16 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Exercicio 1")
         self.setFixedSize(QSize(300,200))
 
-        self.inputA = QLineEdit()
-        self.inputC = QLineEdit()
-        self.inputL = QLineEdit()
+        self.txt_Altura = QLineEdit()
+        self.txt_Comprimento = QLineEdit()
+        self.txt_Largura = QLineEdit()
         
         self.lbl = QLabel()
 
         layout = QVBoxLayout()
-        layout.addWidget(self.inputA)
-        layout.addWidget(self.inputC)
-        layout.addWidget(self.inputL)
+        layout.addWidget(self.txt_Altura)
+        layout.addWidget(self.txt_Comprimento)
+        layout.addWidget(self.txt_Largura)
 
         layout.addWidget(self.lbl)
 
