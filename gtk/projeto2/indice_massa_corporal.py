@@ -4,7 +4,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 builder = Gtk.Builder()
-builder.add_from_file('user_interface.glade')
+builder.add_from_file('C:/GitHub/cursos/gtk/projeto2/user_interface.glade')
 
 
 class Handler():
@@ -14,7 +14,7 @@ class Handler():
         self.text_buffer = builder.get_object('textbuffer1')
 
     def on_button1_clicked(self, button1):
-        imc = float(self.peso.get_text()) / (float(self.altura.get_text()) ** 2)
+        imc = float(self.peso.get_text()) / (float(self.altura.get_text().replace(',', '.')) ** 2)
         self.text_buffer.set_text("Seu IMC é: " + str(round(imc, 2)))
 
     def on_main_window_destroy(self, window):

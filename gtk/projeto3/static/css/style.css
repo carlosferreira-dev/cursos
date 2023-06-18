@@ -1,0 +1,25 @@
+#botao_soma_1 {
+    background: url('static/images/soma.png');
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#botao_reset {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#digito {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#botao_reset:hover {
+    font-size: 22px;
+    background: #ff0000;
+}
+
+#digito:hover {
+    font-size: 22px;
+    background: #6a66ee;
+}
