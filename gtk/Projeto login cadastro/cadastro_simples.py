@@ -19,9 +19,18 @@ class Handler(object):
 
     def login(self, email, senha, lembrar):
         if email == 'admin' and senha == 'admin':
-            print('Login realizado com sucesso!')
+            self.mensagem('Bem-vindo', 'Usuário logado com sucesso!', 'emblem-default')
         else:
-            print('Usuário ou senha inválidos!')
+            self.mensagem('Aviso', 'Email ou senha incorretos!', 'dialog-error')
+
+    def mensagem(self, titulo, msg, icone):
+        mensagem: Gtk.MessageDialog = Builder.get_object("mensagem")
+        mensagem.props.text = titulo
+        mensagem.props.secondary_text = msg
+        mensagem.props.icon_name = icone
+        mensagem.show_all()
+        mensagem.run()
+        mensagem.hide()
 
 Builder = Gtk.Builder()
 Builder.add_from_file("user_interface.glade")
