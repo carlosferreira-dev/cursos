@@ -57,8 +57,8 @@ class Handler(object):
         else:
             self.banco_dados.append(User(len(self.banco_dados)+1, nome, email))
             self.mensagem('Aviso', 'Usuário cadastrado com sucesso!', 'emblem-default')
-            nome = Builder.set_object("cad_nome", '')
-            email = Builder.set_object("cad_email", '')
+            nome = Builder.get_object("cad_nome").set_text('')
+            email = Builder.get_object("cad_email").set_text('')
 
     def on_button_listar_inicial_clicked(self, button):
         self.Stack.set_visible_child_name('view_listar')
